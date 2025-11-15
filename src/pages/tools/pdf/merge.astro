@@ -1,0 +1,22 @@
+---
+import '../../../styles/global.css';
+import Merge from '../../../components/tools/pdf/Merge.svelte';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Merge PDFs — TooldeckAI</title>
+    <meta name="description" content="Combine multiple PDFs into one — fast and private, in your browser." />
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <main class="max-w-4xl mx-auto p-6 space-y-6">
+      <a href="/" class="text-sky-600 hover:underline">&larr; Home</a>
+      <h1 class="text-2xl font-extrabold">Merge PDFs</h1>
+      <div class="space-y-4">
+        <Merge client:load />
+      </div>
+    </main>
+  </body>
+</html>
