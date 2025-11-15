@@ -1,0 +1,18 @@
+{
+  "name": "TooldeckAI",
+  "short_name": "TooldeckAI",
+  "description": "Free AI, PDF and image tools — fast and private.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0ea5e9",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

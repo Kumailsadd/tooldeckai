@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kumailsadd.github.io/tooldeckai/sitemap-index.xml
