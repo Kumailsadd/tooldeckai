@@ -1,10 +1,12 @@
-const CACHE_NAME = "tooldeckai-v2";
+const CACHE_NAME = "tooldeckai-v4";
 const ASSETS = [
   new URL("./", self.registration.scope).href,
   new URL("./manifest.webmanifest", self.registration.scope).href,
   new URL("./favicon.svg", self.registration.scope).href,
   new URL("./tools/pdf/merge/", self.registration.scope).href,
+  new URL("./tools/pdf/split/", self.registration.scope).href,
   new URL("./tools/image/resize/", self.registration.scope).href,
+  new URL("./tools/image/convert/", self.registration.scope).href,
 ];
 
 self.addEventListener("install", (event) => {
