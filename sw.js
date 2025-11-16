@@ -1,4 +1,4 @@
-const CACHE_NAME = "tooldeckai-v1";
+const CACHE_NAME = "tooldeckai-v2";
 const ASSETS = [
   new URL("./", self.registration.scope).href,
   new URL("./manifest.webmanifest", self.registration.scope).href,
