@@ -1,1 +1,229 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/tooldeckai/app.css"><title>Merge PDFs — TooldeckAI</title><meta name="description" content="Combine multiple PDFs into one — fast and private, in your browser."><link rel="canonical" href="https://kumailsadd.github.io/tooldeckai/tools/pdf/merge/"><link rel="manifest" href="/tooldeckai/manifest.webmanifest"><meta name="theme-color" content="#0ea5e9"><link rel="stylesheet" href="https://kumailsadd.github.io/tooldeckai/_astro/index.BL29JSf1.css"></head> <body class="min-h-screen bg-slate-50 text-slate-900"> <main class="max-w-4xl mx-auto p-6 space-y-6"> <a href="/tooldeckai/" class="text-sky-600 hover:underline">&larr; Home</a> <div class="adsense-box rounded border bg-white p-3 text-center text-slate-500">Ad slot</div> <h1 class="text-2xl font-extrabold">Merge PDFs</h1> <div class="space-y-4"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z25MRis" component-url="https://kumailsadd.github.io/tooldeckai/_astro/Merge.HBv14LPc.js" component-export="default" renderer-url="https://kumailsadd.github.io/tooldeckai/_astro/client.svelte.CKBT9gmc.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;Merge&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="space-y-4"><div class="rounded-lg border-2 border-dashed border-slate-300 bg-white p-6 text-center hover:bg-slate-50 cursor-pointer" role="button" tabindex="0" aria-label="Drop PDFs here or click to choose"><p class="font-medium">Drop PDF files here or click to choose</p> <p class="text-xs text-slate-500 mt-1">Max total 25 MB. PDFs only.</p> <input id="pdfPicker" type="file" accept="application/pdf" multiple class="hidden"/></div> <!--[!--><!--]--> <!--[!--><!--]--> <!--[!--><!--]--> <p class="text-xs text-slate-500">All processing happens in your browser. Nothing is uploaded.</p></div><!--]--><!--astro:end--></astro-island> </div> </main> <script defer src="/tooldeckai/consent.js"></script> <script defer src="/tooldeckai/ads.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../app.css" />
+    <title>Merge PDFs — TooldeckAI</title>
+    <meta
+      name="description"
+      content="Combine multiple PDFs into one — fast and private, in your browser."
+    />
+    <link
+      rel="canonical"
+      href="https://kumailsadd.github.io/tooldeckai/tools/pdf/merge/"
+    />
+    <link rel="manifest" href="../../../manifest.webmanifest" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <style>
+      .btn {
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+      .btn-blue {
+        background: #0ea5e9;
+        color: #fff;
+      }
+      .btn-gray {
+        background: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <main class="max-w-4xl mx-auto p-6 space-y-6">
+      <a href="../../../" class="text-sky-600 hover:underline">&larr; Home</a>
+      <div
+        class="adsense-box rounded border bg-white p-3 text-center text-slate-500"
+      >
+        Ad slot
+      </div>
+      <h1 class="text-2xl font-extrabold">Merge PDFs</h1>
+
+      <div
+        id="drop"
+        class="rounded-lg border-2 border-dashed border-slate-300 bg-white p-6 text-center hover:bg-slate-50 cursor-pointer"
+      >
+        <p class="font-medium">Drop PDF files here or click to choose</p>
+        <p class="text-xs text-slate-500 mt-1">Max total 25 MB. PDFs only.</p>
+        <input
+          id="picker"
+          type="file"
+          accept="application/pdf"
+          multiple
+          class="hidden"
+        />
+      </div>
+
+      <div id="list" class="rounded-lg border bg-white hidden">
+        <div class="p-3 text-sm text-slate-600 border-b">Files — reorder</div>
+        <ul id="ul" class="divide-y"></ul>
+        <div class="p-3 flex justify-end gap-2">
+          <button id="clearBtn" class="btn btn-gray">Clear</button>
+          <button id="mergeBtn" class="btn btn-blue">Merge PDFs</button>
+        </div>
+      </div>
+
+      <div id="info" class="text-sm text-sky-700 hidden"></div>
+      <div id="err" class="text-sm text-red-600 hidden"></div>
+
+      <p class="text-xs text-slate-500">
+        All processing happens in your browser. Nothing is uploaded.
+      </p>
+    </main>
+
+    <script>
+      const { PDFDocument } = window.PDFLib;
+      const drop = document.getElementById("drop");
+      const picker = document.getElementById("picker");
+      const list = document.getElementById("list");
+      const ul = document.getElementById("ul");
+      const info = document.getElementById("info");
+      const err = document.getElementById("err");
+      const clearBtn = document.getElementById("clearBtn");
+      const mergeBtn = document.getElementById("mergeBtn");
+
+      let files = [];
+
+      function showErr(msg) {
+        err.textContent = msg;
+        err.classList.remove("hidden");
+      }
+      function clearErr() {
+        err.classList.add("hidden");
+        err.textContent = "";
+      }
+      function showInfo(msg) {
+        info.textContent = msg;
+        info.classList.remove("hidden");
+      }
+      function clearInfo() {
+        info.classList.add("hidden");
+        info.textContent = "";
+      }
+      function fmt(n) {
+        const u = ["B", "KB", "MB", "GB"];
+        let i = 0,
+          v = n;
+        while (v >= 1024 && i < u.length - 1) {
+          v /= 1024;
+          i++;
+        }
+        return v.toFixed(1) + " " + u[i];
+      }
+
+      function renderList() {
+        ul.innerHTML = "";
+        if (files.length === 0) {
+          list.classList.add("hidden");
+          return;
+        }
+        list.classList.remove("hidden");
+        files.forEach((f, i) => {
+          const li = document.createElement("li");
+          li.className = "flex items-center justify-between p-3";
+          li.innerHTML = `
+        <div class="min-w-0">
+          <div class="truncate font-medium">${f.name}</div>
+          <div class="text-xs text-slate-500">${fmt(f.size)}</div>
+        </div>
+        <div class="flex items-center gap-2">
+          <button class="btn btn-gray" ${
+            i === 0 ? "disabled" : ""
+          } data-up="${i}">↑</button>
+          <button class="btn btn-gray" ${
+            i === files.length - 1 ? "disabled" : ""
+          } data-down="${i}">↓</button>
+          <button class="btn btn-blue" data-remove="${i}" style="background:#ef4444">Remove</button>
+        </div>`;
+          ul.appendChild(li);
+        });
+      }
+
+      function addFiles(listLike) {
+        clearErr();
+        clearInfo();
+        const picked = Array.from(listLike).filter(
+          (f) => f.type === "application/pdf"
+        );
+        files = files.concat(picked);
+        const total = files.reduce((a, f) => a + f.size, 0);
+        if (total > 25 * 1024 * 1024) {
+          showErr("Total size exceeds 25 MB.");
+          files = [];
+        }
+        renderList();
+      }
+
+      drop.addEventListener("click", () => picker.click());
+      picker.addEventListener("change", (e) => addFiles(e.target.files));
+      drop.addEventListener("dragover", (e) => {
+        e.preventDefault();
+      });
+      drop.addEventListener("drop", (e) => {
+        e.preventDefault();
+        addFiles(e.dataTransfer.files);
+      });
+
+      ul.addEventListener("click", (e) => {
+        const up = e.target.getAttribute("data-up");
+        const down = e.target.getAttribute("data-down");
+        const rem = e.target.getAttribute("data-remove");
+        if (up !== null) {
+          const i = +up;
+          if (i > 0) {
+            [files[i - 1], files[i]] = [files[i], files[i - 1]];
+            renderList();
+          }
+        } else if (down !== null) {
+          const i = +down;
+          if (i < files.length - 1) {
+            [files[i], files[i + 1]] = [files[i + 1], files[i]];
+            renderList();
+          }
+        } else if (rem !== null) {
+          const i = +rem;
+          files.splice(i, 1);
+          renderList();
+        }
+      });
+
+      clearBtn.addEventListener("click", () => {
+        files = [];
+        renderList();
+      });
+
+      mergeBtn.addEventListener("click", async () => {
+        clearErr();
+        clearInfo();
+        if (files.length < 2) {
+          showErr("Add at least 2 PDF files.");
+          return;
+        }
+        try {
+          const out = await PDFDocument.create();
+          for (let i = 0; i < files.length; i++) {
+            showInfo(`Merging ${i + 1} of ${files.length}…`);
+            const src = await PDFDocument.load(await files[i].arrayBuffer());
+            const pages = await out.copyPages(src, src.getPageIndices());
+            pages.forEach((p) => out.addPage(p));
+          }
+          const bytes = await out.save();
+          const blob = new Blob([bytes], { type: "application/pdf" });
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          a.href = url;
+          a.download = "merged.pdf";
+          a.click();
+          URL.revokeObjectURL(url);
+          showInfo("Download started.");
+        } catch (e) {
+          console.error(e);
+          showErr("Failed to merge PDFs.");
+        }
+      });
+    </script>
+    <script defer src="../../../consent.js"></script>
+    <script defer src="../../../ads.js"></script>
+  </body>
+</html>

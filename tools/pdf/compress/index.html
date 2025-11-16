@@ -1,2 +1,213 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/tooldeckai/app.css"><title>Compress PDF — TooldeckAI</title><meta name="description" content="Compress PDF size by re-encoding pages with chosen quality and resolution — private and in-browser."><link rel="canonical" href="https://kumailsadd.github.io/tooldeckai/tools/pdf/compress/"><link rel="manifest" href="/tooldeckai/manifest.webmanifest"><meta name="theme-color" content="#0ea5e9"><link rel="stylesheet" href="https://kumailsadd.github.io/tooldeckai/_astro/index.BL29JSf1.css"></head> <body class="min-h-screen bg-slate-50 text-slate-900"> <main class="max-w-4xl mx-auto p-6 space-y-6"> <a href="/tooldeckai/" class="text-sky-600 hover:underline">&larr; Home</a> <div class="adsense-box rounded border bg-white p-3 text-center text-slate-500">Ad slot</div> <h1 class="text-2xl font-extrabold">Compress PDF</h1> <div class="space-y-4"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="Z1jPBcd" component-url="https://kumailsadd.github.io/tooldeckai/_astro/Compress.CkZPL2e8.js" component-export="default" renderer-url="https://kumailsadd.github.io/tooldeckai/_astro/client.svelte.CKBT9gmc.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;Compress&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="space-y-4"><div class="rounded-lg border bg-white p-4"><label class="block text-sm font-medium mb-2">Choose PDF (max 25 MB)</label> <input class="block w-full" type="file" accept="application/pdf"/></div> <div class="grid grid-cols-2 gap-3"><div><label class="text-xs text-slate-600">Quality</label> <input class="w-full" type="range" min="0.1" max="1" step="0.05" value="0.7"/> <div class="text-xs text-slate-600 mt-1">70%</div></div> <div><label class="text-xs text-slate-600">Resolution (scale %)</label> <input class="w-full" type="range" min="50" max="120" step="5" value="80"/> <div class="text-xs text-slate-600 mt-1">80%</div></div></div> <!--[!--><!--]--> <!--[!--><!--]--> <button class="px-4 py-2 rounded bg-sky-500 hover:bg-sky-600 text-white disabled:opacity-60" disabled>Compress &amp; Download</button> <p class="text-xs text-slate-500">This method rasterizes each page and re-encodes as JPEG. Great for PDFs with images.
-    For vector-heavy PDFs, file size may not reduce much.</p></div><!--]--><!--astro:end--></astro-island> </div> </main> <script defer src="/tooldeckai/consent.js"></script> <script defer src="/tooldeckai/ads.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../app.css" />
+    <title>Compress PDF — TooldeckAI</title>
+    <link
+      rel="canonical"
+      href="https://kumailsadd.github.io/tooldeckai/tools/pdf/compress/"
+    />
+    <link rel="manifest" href="../../../manifest.webmanifest" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.min.js"></script>
+    <script>
+      pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.6.82/build/pdf.worker.min.js";
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <style>
+      .btn {
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+      .btn-blue {
+        background: #0ea5e9;
+        color: #fff;
+      }
+      .btn-gray {
+        background: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <main class="max-w-4xl mx-auto p-6 space-y-6">
+      <a href="../../../" class="text-sky-600 hover:underline">&larr; Home</a>
+      <div
+        class="adsense-box rounded border bg-white p-3 text-center text-slate-500"
+      >
+        Ad slot
+      </div>
+      <h1 class="text-2xl font-extrabold">Compress PDF</h1>
+
+      <div class="rounded-lg border bg-white p-4">
+        <label class="block text-sm font-medium mb-2"
+          >Choose PDF (max 25 MB)</label
+        >
+        <input
+          id="picker"
+          class="block w-full"
+          type="file"
+          accept="application/pdf"
+        />
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="text-xs text-slate-600">Quality</label>
+          <input
+            id="q"
+            class="w-full"
+            type="range"
+            min="0.1"
+            max="1"
+            step="0.05"
+            value="0.7"
+          />
+          <div class="text-xs text-slate-600 mt-1" id="qp">70%</div>
+        </div>
+        <div>
+          <label class="text-xs text-slate-600">Resolution (scale %)</label>
+          <input
+            id="s"
+            class="w-full"
+            type="range"
+            min="50"
+            max="120"
+            step="5"
+            value="80"
+          />
+          <div class="text-xs text-slate-600 mt-1" id="sp">80%</div>
+        </div>
+      </div>
+
+      <div id="err" class="text-sm text-red-600 hidden"></div>
+      <div id="info" class="text-sm text-sky-700 hidden"></div>
+
+      <button id="go" class="btn btn-blue" disabled>Compress & Download</button>
+      <p class="text-xs text-slate-500">
+        This method rasterizes each page and re-encodes as JPEG. Great for PDFs
+        with images.
+      </p>
+    </main>
+
+    <script>
+      const picker = document.getElementById("picker");
+      const q = document.getElementById("q"),
+        qp = document.getElementById("qp");
+      const s = document.getElementById("s"),
+        sp = document.getElementById("sp");
+      const go = document.getElementById("go");
+      const err = document.getElementById("err"),
+        info = document.getElementById("info");
+      const { PDFDocument } = window.PDFLib;
+
+      let file = null;
+      function setErr(m) {
+        err.textContent = m;
+        err.classList.remove("hidden");
+      }
+      function clrErr() {
+        err.classList.add("hidden");
+        err.textContent = "";
+      }
+      function setInfo(m) {
+        info.textContent = m;
+        info.classList.remove("hidden");
+      }
+      function clrInfo() {
+        info.classList.add("hidden");
+        info.textContent = "";
+      }
+
+      picker.addEventListener("change", (e) => {
+        file = e.target.files?.[0] || null;
+        go.disabled = !file;
+        clrErr();
+        clrInfo();
+      });
+      q.addEventListener(
+        "input",
+        () => (qp.textContent = Math.round(Number(q.value) * 100) + "%")
+      );
+      s.addEventListener("input", () => (sp.textContent = s.value + "%"));
+
+      function dl(b, n) {
+        const u = URL.createObjectURL(b);
+        const a = document.createElement("a");
+        a.href = u;
+        a.download = n;
+        a.click();
+        URL.revokeObjectURL(u);
+      }
+      function sanitizeBase(n) {
+        return (n.replace(/\.[^/.]+$/, "") || "document")
+          .normalize("NFKD")
+          .replace(/[^\w\-]+/g, "-")
+          .replace(/-+/g, "-")
+          .replace(/^-+|-+$/g, "");
+      }
+
+      go.addEventListener("click", async () => {
+        clrErr();
+        clrInfo();
+        if (!file) {
+          setErr("Select a PDF first.");
+          return;
+        }
+        if (file.size > 25 * 1024 * 1024) {
+          setErr("File exceeds 25 MB.");
+          return;
+        }
+        try {
+          const data = await file.arrayBuffer();
+          const src = await pdfjsLib.getDocument({ data }).promise;
+          const out = await PDFDocument.create();
+          const total = src.numPages;
+          const scale = Math.max(0.5, Math.min(1.2, Number(s.value) / 100));
+
+          for (let i = 1; i <= total; i++) {
+            setInfo(`Processing page ${i} of ${total}…`);
+            const page = await src.getPage(i);
+            const viewport = page.getViewport({ scale });
+            const canvas = document.createElement("canvas");
+            canvas.width = Math.max(1, Math.floor(viewport.width));
+            canvas.height = Math.max(1, Math.floor(viewport.height));
+            const ctx = canvas.getContext("2d");
+            await page.render({ canvasContext: ctx, viewport }).promise;
+            const blob = await new Promise((res, rej) =>
+              canvas.toBlob(
+                (b) => (b ? res(b) : rej(new Error("Encode failed"))),
+                "image/jpeg",
+                Number(q.value)
+              )
+            );
+            const imgBytes = new Uint8Array(await blob.arrayBuffer());
+            const jpg = await out.embedJpg(imgBytes);
+            const p = out.addPage([canvas.width, canvas.height]);
+            p.drawImage(jpg, {
+              x: 0,
+              y: 0,
+              width: canvas.width,
+              height: canvas.height,
+            });
+            canvas.width = 0;
+            canvas.height = 0;
+          }
+          const outBytes = await out.save();
+          dl(
+            new Blob([outBytes], { type: "application/pdf" }),
+            `${sanitizeBase(file.name)}_compressed.pdf`
+          );
+          setInfo("Download started.");
+        } catch (e) {
+          console.error(e);
+          setErr("Failed to compress PDF.");
+        }
+      });
+    </script>
+    <script defer src="../../../consent.js"></script>
+    <script defer src="../../../ads.js"></script>
+  </body>
+</html>

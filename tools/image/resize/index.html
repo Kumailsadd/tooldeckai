@@ -1,1 +1,281 @@
-<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="/tooldeckai/app.css"><title>Resize Image — TooldeckAI</title><meta name="description" content="Resize, convert, and compress images in your browser. Fast and private."><link rel="canonical" href="https://kumailsadd.github.io/tooldeckai/tools/image/resize/"><link rel="manifest" href="/tooldeckai/manifest.webmanifest"><meta name="theme-color" content="#0ea5e9"><link rel="stylesheet" href="https://kumailsadd.github.io/tooldeckai/_astro/index.BL29JSf1.css"></head> <body class="min-h-screen bg-slate-50 text-slate-900"> <main class="max-w-4xl mx-auto p-6 space-y-6"> <a href="/tooldeckai/" class="text-sky-600 hover:underline">&larr; Home</a> <div class="adsense-box rounded border bg-white p-3 text-center text-slate-500">Ad slot</div> <h1 class="text-2xl font-extrabold">Resize Image</h1> <div class="space-y-4"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();</script><script>(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="ZvvLge" component-url="https://kumailsadd.github.io/tooldeckai/_astro/Resize.C_a2r7vB.js" component-export="default" renderer-url="https://kumailsadd.github.io/tooldeckai/_astro/client.svelte.CKBT9gmc.js" props="{}" ssr client="load" opts="{&quot;name&quot;:&quot;Resize&quot;,&quot;value&quot;:true}" await-children><!--[--><div class="space-y-4"><div class="rounded-lg border bg-white p-4"><label for="picker" class="block text-sm font-medium mb-2">Choose image (max 25 MB)</label> <input id="picker" class="block w-full" type="file" accept="image/*"/> <div class="mt-3 text-xs text-slate-600">Original: 0 × 0px</div></div> <div class="grid grid-cols-2 gap-3"><div><label class="text-xs text-slate-600" for="width">Width (px)</label> <input id="width" class="w-full border rounded px-2 py-1" type="number" min="1" value="" placeholder="e.g., 1024"/></div> <div><label class="text-xs text-slate-600" for="height">Height (px)</label> <input id="height" class="w-full border rounded px-2 py-1" type="number" min="1" value="" placeholder="e.g., 768"/></div></div> <label class="inline-flex items-center gap-2 text-sm"><input type="checkbox" checked/> Keep aspect ratio</label> <div class="grid grid-cols-2 gap-3"><div><label class="text-xs text-slate-600" for="format">Format</label> <select id="format" class="w-full border rounded px-2 py-1"><option value="image/webp" selected>WEBP (recommended)</option><option value="image/jpeg">JPG</option><option value="image/png">PNG</option><option value="image/avif">AVIF (if supported)</option></select></div> <div><label class="text-xs text-slate-600" for="quality">Quality</label> <input id="quality" class="w-full" type="range" min="0.1" max="1" step="0.05" value="0.9"/> <div class="text-xs text-slate-600 mt-1">90%</div></div></div> <div class="text-xs text-slate-600">Target: 0 × 0px</div> <!--[!--><!--]--> <!--[!--><!--]--> <div class="flex gap-2"><button class="px-4 py-2 rounded bg-slate-100 hover:bg-slate-200">Reset</button> <button class="px-4 py-2 rounded bg-sky-500 hover:bg-sky-600 text-white disabled:opacity-60" disabled>Download resized image</button></div> <p class="text-xs text-slate-500">All processing happens in your browser. Nothing is uploaded.</p></div><!--]--><!--astro:end--></astro-island> </div> </main> <script defer src="/tooldeckai/consent.js"></script> <script defer src="/tooldeckai/ads.js"></script> </body> </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../app.css" />
+    <title>Resize Image — TooldeckAI</title>
+    <link
+      rel="canonical"
+      href="https://kumailsadd.github.io/tooldeckai/tools/image/resize/"
+    />
+    <link rel="manifest" href="../../../manifest.webmanifest" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <style>
+      .btn {
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+      .btn-blue {
+        background: #0ea5e9;
+        color: #fff;
+      }
+      .btn-gray {
+        background: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <main class="max-w-4xl mx-auto p-6 space-y-6">
+      <a href="../../../" class="text-sky-600 hover:underline">&larr; Home</a>
+      <div
+        class="adsense-box rounded border bg-white p-3 text-center text-slate-500"
+      >
+        Ad slot
+      </div>
+      <h1 class="text-2xl font-extrabold">Resize Image</h1>
+
+      <div class="rounded-lg border bg-white p-4">
+        <label class="block text-sm font-medium mb-2"
+          >Choose image (max 25 MB)</label
+        >
+        <input id="picker" class="block w-full" type="file" accept="image/*" />
+        <div class="mt-3 text-xs text-slate-600">
+          Original: <span id="orig">0 × 0</span>px
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="text-xs text-slate-600">Width (px)</label>
+          <input
+            id="w"
+            class="w-full border rounded px-2 py-1"
+            type="number"
+            min="1"
+            placeholder="e.g., 1024"
+          />
+        </div>
+        <div>
+          <label class="text-xs text-slate-600">Height (px)</label>
+          <input
+            id="h"
+            class="w-full border rounded px-2 py-1"
+            type="number"
+            min="1"
+            placeholder="e.g., 768"
+          />
+        </div>
+      </div>
+
+      <label class="inline-flex items-center gap-2 text-sm">
+        <input type="checkbox" id="keep" checked /> Keep aspect ratio
+      </label>
+
+      <div class="grid grid-cols-2 gap-3">
+        <div>
+          <label class="text-xs text-slate-600">Format</label>
+          <select id="fmt" class="w-full border rounded px-2 py-1">
+            <option value="image/webp">WEBP (recommended)</option>
+            <option value="image/jpeg">JPG</option>
+            <option value="image/png">PNG</option>
+            <option value="image/avif">AVIF (if supported)</option>
+          </select>
+        </div>
+        <div>
+          <label class="text-xs text-slate-600">Quality</label>
+          <input
+            id="q"
+            class="w-full"
+            type="range"
+            min="0.1"
+            max="1"
+            step="0.05"
+            value="0.9"
+          />
+          <div class="text-xs text-slate-600 mt-1" id="qp">90%</div>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-600">
+        Target: <span id="tgt">0 × 0</span>px
+      </div>
+
+      <div id="err" class="text-sm text-red-600 hidden"></div>
+      <div id="info" class="text-sm text-sky-700 hidden"></div>
+
+      <div class="flex gap-2">
+        <button class="btn btn-gray" id="reset">Reset</button>
+        <button class="btn btn-blue" id="go" disabled>
+          Download resized image
+        </button>
+      </div>
+
+      <p class="text-xs text-slate-500">
+        All processing happens in your browser. Nothing is uploaded.
+      </p>
+    </main>
+
+    <script>
+      const picker = document.getElementById("picker");
+      const orig = document.getElementById("orig");
+      const tgt = document.getElementById("tgt");
+      const wIn = document.getElementById("w");
+      const hIn = document.getElementById("h");
+      const keep = document.getElementById("keep");
+      const fmt = document.getElementById("fmt");
+      const q = document.getElementById("q");
+      const qp = document.getElementById("qp");
+      const go = document.getElementById("go");
+      const reset = document.getElementById("reset");
+      const err = document.getElementById("err");
+      const info = document.getElementById("info");
+
+      let file = null,
+        img = null,
+        ow = 0,
+        oh = 0;
+
+      function setErr(m) {
+        err.textContent = m;
+        err.classList.remove("hidden");
+      }
+      function clrErr() {
+        err.classList.add("hidden");
+        err.textContent = "";
+      }
+      function setInfo(m) {
+        info.textContent = m;
+        info.classList.remove("hidden");
+      }
+      function clrInfo() {
+        info.classList.add("hidden");
+        info.textContent = "";
+      }
+
+      picker.addEventListener("change", async (e) => {
+        clrErr();
+        clrInfo();
+        file = e.target.files?.[0] || null;
+        if (!file) return;
+        if (!file.type.startsWith("image/")) {
+          setErr("Select an image file.");
+          return;
+        }
+        if (file.size > 25 * 1024 * 1024) {
+          setErr("File exceeds 25 MB.");
+          return;
+        }
+
+        const url = URL.createObjectURL(file);
+        img = new Image();
+        img.onload = () => {
+          ow = img.naturalWidth;
+          oh = img.naturalHeight;
+          URL.revokeObjectURL(url);
+          orig.textContent = ow + " × " + oh;
+          recalc();
+          go.disabled = false;
+        };
+        img.onerror = () => {
+          setErr("Failed to load image.");
+          URL.revokeObjectURL(url);
+        };
+        img.src = url;
+      });
+
+      function recalc() {
+        let w = Number(wIn.value) || 0;
+        let h = Number(hIn.value) || 0;
+        if (!img) {
+          tgt.textContent = "0 × 0";
+          return;
+        }
+        if (!w && !h) {
+          w = ow;
+          h = oh;
+        } else if (keep.checked) {
+          if (w && !h) h = Math.round((oh / ow) * w);
+          else if (!w && h) w = Math.round((ow / oh) * h);
+        } else {
+          if (!w) w = ow;
+          if (!h) h = oh;
+        }
+        tgt.textContent = w + " × " + h;
+        qp.textContent = Math.round(Number(q.value) * 100) + "%";
+      }
+      [wIn, hIn, keep, q].forEach((el) => el.addEventListener("input", recalc));
+
+      reset.addEventListener("click", () => {
+        file = null;
+        img = null;
+        ow = oh = 0;
+        picker.value = "";
+        wIn.value = "";
+        hIn.value = "";
+        orig.textContent = "0 × 0";
+        tgt.textContent = "0 × 0";
+        go.disabled = true;
+        clrErr();
+        clrInfo();
+      });
+
+      go.addEventListener("click", async () => {
+        clrErr();
+        clrInfo();
+        if (!img || !file) {
+          setErr("Select an image.");
+          return;
+        }
+        let [w, h] = (tgt.textContent || "0 × 0")
+          .split("×")
+          .map((s) => Number(s.trim()));
+        if (!w || !h) {
+          setErr("Enter width or height.");
+          return;
+        }
+
+        try {
+          const canvas = document.createElement("canvas");
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext("2d");
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = "high";
+          ctx.drawImage(img, 0, 0, w, h);
+          const type = fmt.value;
+          const blob = await new Promise((res, rej) =>
+            canvas.toBlob(
+              (b) => (b ? res(b) : rej(new Error("Encode failed"))),
+              type,
+              Number(q.value)
+            )
+          );
+          const url = URL.createObjectURL(blob);
+          const a = document.createElement("a");
+          const ext =
+            type === "image/png"
+              ? "png"
+              : type === "image/jpeg"
+              ? "jpg"
+              : type === "image/avif"
+              ? "avif"
+              : "webp";
+          a.href = url;
+          a.download =
+            (file.name.replace(/\.[^/.]+$/, "") || "image") +
+            `_${w}x${h}.` +
+            ext;
+          a.click();
+          URL.revokeObjectURL(url);
+          setInfo("Download started.");
+        } catch (e) {
+          console.error(e);
+          setErr("Failed to process image.");
+        }
+      });
+    </script>
+    <script defer src="../../../consent.js"></script>
+    <script defer src="../../../ads.js"></script>
+  </body>
+</html>

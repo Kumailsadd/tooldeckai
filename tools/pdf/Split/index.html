@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../app.css" />
+    <title>Split PDF — TooldeckAI</title>
+    <link
+      rel="canonical"
+      href="https://kumailsadd.github.io/tooldeckai/tools/pdf/split/"
+    />
+    <link rel="manifest" href="../../../manifest.webmanifest" />
+    <meta name="theme-color" content="#0ea5e9" />
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <style>
+      .btn {
+        padding: 8px 12px;
+        border-radius: 8px;
+      }
+      .btn-blue {
+        background: #0ea5e9;
+        color: #fff;
+      }
+      .btn-gray {
+        background: #e2e8f0;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-50 text-slate-900">
+    <main class="max-w-4xl mx-auto p-6 space-y-6">
+      <a href="../../../" class="text-sky-600 hover:underline">&larr; Home</a>
+      <div
+        class="adsense-box rounded border bg-white p-3 text-center text-slate-500"
+      >
+        Ad slot
+      </div>
+      <h1 class="text-2xl font-extrabold">Split PDF</h1>
+
+      <div class="rounded-lg border bg-white p-4">
+        <label class="block text-sm font-medium mb-2"
+          >Choose PDF (max 25 MB)</label
+        >
+        <input
+          id="picker"
+          class="block w-full"
+          type="file"
+          accept="application/pdf"
+        />
+        <div class="mt-2 text-xs text-slate-600">
+          Pages: <span id="pages">0</span>
+        </div>
+      </div>
+
+      <div class="rounded-lg border bg-white p-4 space-y-2">
+        <label class="text-xs text-slate-600">Page ranges (e.g., 1-3,5)</label>
+        <input
+          id="ranges"
+          class="w-full border rounded px-2 py-1"
+          placeholder="1-3,5"
+        />
+        <div class="flex gap-2">
+          <button id="extract" class="btn btn-blue" disabled>
+            Extract selected pages
+          </button>
+          <button id="splitzip" class="btn btn-gray" disabled>
+            Split all pages to ZIP
+          </button>
+        </div>
+      </div>
+
+      <div id="info" class="text-sm text-sky-700 hidden"></div>
+      <div id="err" class="text-sm text-red-600 hidden"></div>
+
+      <p class="text-xs text-slate-500">
+        All processing happens in your browser. Nothing is uploaded.
+      </p>
+    </main>
+
+    <script>
+      const { PDFDocument } = window.PDFLib;
+      const JSZip = window.JSZip;
+
+      const picker = document.getElementById("picker");
+      const pagesEl = document.getElementById("pages");
+      const rangesEl = document.getElementById("ranges");
+      const extractBtn = document.getElementById("extract");
+      const splitBtn = document.getElementById("splitzip");
+      const info = document.getElementById("info");
+      const err = document.getElementById("err");
+
+      let file = null,
+        pageCount = 0;
+
+      function setErr(m) {
+        err.textContent = m;
+        err.classList.remove("hidden");
+      }
+      function clrErr() {
+        err.classList.add("hidden");
+        err.textContent = "";
+      }
+      function setInfo(m) {
+        info.textContent = m;
+        info.classList.remove("hidden");
+      }
+      function clrInfo() {
+        info.classList.add("hidden");
+        info.textContent = "";
+      }
+
+      picker.addEventListener("change", async (e) => {
+        clrErr();
+        clrInfo();
+        file = e.target.files?.[0] || null;
+        if (!file) return;
+        if (file.size > 25 * 1024 * 1024) {
+          setErr("File exceeds 25 MB.");
+          file = null;
+          return;
+        }
+        try {
+          const src = await PDFDocument.load(await file.arrayBuffer());
+          pageCount = src.getPageCount();
+          pagesEl.textContent = pageCount;
+          extractBtn.disabled = false;
+          splitBtn.disabled = false;
+        } catch {
+          setErr("Failed to read PDF.");
+        }
+      });
+
+      function parseRanges(input, total) {
+        const set = new Set();
+        const parts = input
+          .split(",")
+          .map((p) => p.trim())
+          .filter(Boolean);
+        for (const p of parts) {
+          const m = p.match(/^(\d+)-(\d+)$/);
+          if (m) {
+            let a = +m[1],
+              b = +m[2];
+            if (a > b) [a, b] = [b, a];
+            for (let i = a; i <= b; i++)
+              if (i >= 1 && i <= total) set.add(i - 1);
+          } else {
+            const n = +p;
+            if (n >= 1 && n <= total) set.add(n - 1);
+          }
+        }
+        return Array.from(set).sort((a, b) => a - b);
+      }
+
+      function dl(blob, name) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = name;
+        a.click();
+        URL.revokeObjectURL(url);
+      }
+
+      extractBtn.addEventListener("click", async () => {
+        clrErr();
+        clrInfo();
+        if (!file) {
+          setErr("Pick a PDF first.");
+          return;
+        }
+        const idxs = parseRanges(rangesEl.value, pageCount);
+        if (idxs.length === 0) {
+          setErr("No valid page numbers.");
+          return;
+        }
+        try {
+          const src = await PDFDocument.load(await file.arrayBuffer());
+          const out = await PDFDocument.create();
+          const pages = await out.copyPages(src, idxs);
+          pages.forEach((p) => out.addPage(p));
+          const bytes = await out.save();
+          dl(new Blob([bytes], { type: "application/pdf" }), "extracted.pdf");
+          setInfo("Download started.");
+        } catch (e) {
+          console.error(e);
+          setErr("Failed to extract pages.");
+        }
+      });
+
+      splitBtn.addEventListener("click", async () => {
+        clrErr();
+        clrInfo();
+        if (!file) {
+          setErr("Pick a PDF first.");
+          return;
+        }
+        try {
+          const src = await PDFDocument.load(await file.arrayBuffer());
+          const total = src.getPageCount();
+          const zip = new JSZip();
+          for (let i = 0; i < total; i++) {
+            setInfo(`Splitting page ${i + 1}/${total}…`);
+            const out = await PDFDocument.create();
+            const [p] = await out.copyPages(src, [i]);
+            out.addPage(p);
+            const bytes = await out.save();
+            zip.file(`page-${String(i + 1).padStart(3, "0")}.pdf`, bytes);
+            await new Promise((r) => setTimeout(r, 0));
+          }
+          const blob = await zip.generateAsync({ type: "blob" });
+          dl(blob, "split-pages.zip");
+          setInfo("ZIP download started.");
+        } catch (e) {
+          console.error(e);
+          setErr("Failed to split pages.");
+        }
+      });
+    </script>
+    <script defer src="../../../consent.js"></script>
+    <script defer src="../../../ads.js"></script>
+  </body>
+</html>
